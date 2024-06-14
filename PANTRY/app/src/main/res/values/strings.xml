@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">PANTRY</string>
+
+    <string name="application_home">Pantry Pal</string>
+    <string name="restuarant_home">Pantry Pal</string>
+    <string name="restuarant_home_th">Application</string>
+    <string name="our_meals">Our Meals</string>
+    <string name="contact_information">Create By</string>
+    <string name="name1">Danaikrit Jaiwong</string>
+    <string name="name2">Pharanya Liwiriyasakun</string>
+    <string name="topic">Application Detail</string>
+    <string name="detail_app">Detail App</string>
+    <string name="menus_food">Menus</string>
+    <string name="food_name">Food Name</string>
+    <string name="food_price">Food Detail</string>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+    <string name="home_menu">Home</string>
+    <string name="menu_food">Menus</string>
+    <string name="logout_menu">Logout</string>
+
+
+    <string name="signup_string">Sign Up</string>
+    <string name="signin_string">Login</string>
+
+
+    <string name="failed_login">Login Fail</string>
+    <string name="failed_registration">SignUp Fail</string>
+
+    <string name="success_login">Login Success</string>
+    <string name="success_registration">SignUp Success</string>
+
+</resources>
