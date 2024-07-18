@@ -20,6 +20,9 @@ public class PantryApplication extends Application {
         shared = new PantrySharedPreference(getApplicationContext());
     }
 
+
+
+
     public PantrySharedPreference getShared(){
         return shared;
     }

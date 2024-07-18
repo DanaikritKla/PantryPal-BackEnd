@@ -3,6 +3,7 @@ package com.project.pantry;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -70,6 +71,10 @@ public class LoginActivity extends AppCompatActivity {
                 String enteredEmail = emailInput.getText().toString().trim();
                 String enteredPassword = passwordInput.getText().toString().trim();
 
+                if(TextUtils.isEmpty(enteredEmail) || TextUtils.isEmpty(enteredPassword)){
+                    Helper.displayErrorMessage(LoginActivity.this, getString(R.string.fill_all_fields));
+                }
+
                 //make server call for user authentication
                 authenticateUserInRemoteServer(enteredEmail, enteredPassword);
             }
@@ -120,7 +125,7 @@ public class LoginActivity extends AppCompatActivity {
                         //save login data to a shared preference
                         String userData = ((PantryApplication)getApplication()).getGsonObject().toJson(response);
                         ((PantryApplication)getApplication()).getShared().setUserData(userData);
-
+                        Toast.makeText(LoginActivity.this, R.string.success_login, Toast.LENGTH_LONG).show();
                         // navigate to restaurant home
                         Intent loginIntent = new Intent(LoginActivity.this, MainActivity.class);
                         startActivity(loginIntent);

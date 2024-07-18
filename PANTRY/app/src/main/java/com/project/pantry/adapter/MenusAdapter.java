@@ -1,5 +1,6 @@
 package com.project.pantry.adapter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -10,9 +11,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.google.gson.Gson;
+import com.project.pantry.FoodDetailActivity;
 import com.project.pantry.R;
 import com.project.pantry.entities.MenusObject;
 import com.project.pantry.utils.Helper;
+import com.project.pantry.utils.PantryApplication;
 
 import java.util.List;
 
@@ -42,10 +46,15 @@ public class MenusAdapter extends RecyclerView.Adapter<MenusViewHolder>{
         String serverImagePath = Helper.PUBLIC_FOLDER_IMAGE_FOOD + catObject.getMenu_image();
         Glide.with(context).load(serverImagePath).diskCacheStrategy(DiskCacheStrategy.ALL).fitCenter().override(300, 300).into(holder.foodImage);
 
+        Gson gson = ((PantryApplication)((Activity)context).getApplication()).getGsonObject();
+        final String objectToString = gson.toJson(catObject);
+
         holder.foodImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent foodIntent = new Intent(context, FoodDetailActivity.class);
+                foodIntent.putExtra("MENU_ITEM", objectToString);
+                context.startActivity(foodIntent);
             }
         });
     }

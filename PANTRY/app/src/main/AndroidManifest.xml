@@ -30,6 +30,7 @@
         <activity android:name=".SignUpActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".MainActivity" />
+        <activity android:name=".FoodDetailActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

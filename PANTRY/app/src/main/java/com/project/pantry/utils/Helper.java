@@ -10,8 +10,8 @@ import java.util.Locale;
 
 public class Helper {
 
-    public static final String PUBLIC_FOLDER = "http://192.168.12.117/pantry/android/";
-    public static final String PUBLIC_FOLDER_IMAGE_FOOD = "http://192.168.12.117/pantry/food/";
+    public static final String PUBLIC_FOLDER = "http://192.168.0.109/pantry/android/";
+    public static final String PUBLIC_FOLDER_IMAGE_FOOD = "http://192.168.0.109/pantry/food/";
     public static final String PATH_TO_SAVE_REGISTER = PUBLIC_FOLDER + "sign_up.php";
     public static final String PATH_TO_SERVER_LOGIN = PUBLIC_FOLDER + "sign_in.php";
     public static final String PATH_TO_SERVER_ALL_MENUS = PUBLIC_FOLDER + "all_menu.php";

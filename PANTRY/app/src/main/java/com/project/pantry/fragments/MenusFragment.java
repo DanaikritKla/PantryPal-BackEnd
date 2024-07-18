@@ -77,7 +77,7 @@ public class MenusFragment extends Fragment {
                         List<MenusObject> menuObject = new ArrayList<>();
                         for(int i = 0; i < response.length; i++){
                             Log.d(TAG, "Menu name " + response[i].getMenu_name());
-                            menuObject.add(new MenusObject(response[i].getId(), response[i].getMenu_name(), response[i].getFood_category(), response[i].getFood_type(), response[i].getMenu_image()));
+                            menuObject.add(new MenusObject(response[i].getId(), response[i].getMenu_name(), response[i].getFood_category(), response[i].getFood_type(), response[i].getMenu_image(), response[i].getCook()));
                         }
                         MenusAdapter mAdapter = new MenusAdapter(getActivity(), menuObject);
                         recyclerView.setAdapter(mAdapter);

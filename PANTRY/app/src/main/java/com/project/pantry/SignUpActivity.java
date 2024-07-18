@@ -3,6 +3,7 @@ package com.project.pantry;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -75,18 +76,15 @@ public class SignUpActivity extends AppCompatActivity {
                 String enteredPassword = password.getText().toString().trim();
                 String enteredEmail = email.getText().toString();
 
-                /*if(TextUtils.isEmpty(enteredUsername) || TextUtils.isEmpty(enteredEmail) || TextUtils.isEmpty(enteredPassword)
-                        || TextUtils.isEmpty(enteredLineId) || TextUtils.isEmpty(enteredPhoneNumber)){
-                    Helper.displayErrorMessage(RegisterActivity.this, getString(R.string.fill_all_fields));
+                if(TextUtils.isEmpty(enteredUsername) || TextUtils.isEmpty(enteredEmail) || TextUtils.isEmpty(enteredPassword)){
+                    Helper.displayErrorMessage(SignUpActivity.this, getString(R.string.fill_all_fields));
                 }
 
                 if(!Helper.isValidEmail(enteredEmail)){
-                    Helper.displayErrorMessage(RegisterActivity.this, getString(R.string.invalid_email));
+                    Helper.displayErrorMessage(SignUpActivity.this, getString(R.string.invalid_email));
                 }
 
-                if(enteredUsername.length() < Helper.MINIMUM_LENGTH || enteredPassword.length() < Helper.MINIMUM_LENGTH){
-                    Helper.displayErrorMessage(RegisterActivity.this,getString(R.string.maximum_length));
-                }*/
+
                 //Add new user to the server
                 addNewUserToRemoteServer(enteredUsername, enteredEmail, enteredPassword);
             }

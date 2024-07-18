@@ -13,6 +13,9 @@
     <string name="menus_food">Menus</string>
     <string name="food_name">Food Name</string>
     <string name="food_price">Food Detail</string>
+    <string name="menu_material">Material</string>
+    <string name="test">xxxxxxxxxx</string>
+    <string name="menu_detail">Food Detail</string>
 
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -30,6 +33,9 @@
 
     <string name="failed_login">Login Fail</string>
     <string name="failed_registration">SignUp Fail</string>
+    <string name="fill_all_fields">Fill All Fields</string>
+    <string name="invalid_email">Invalid Email</string>
+    <string name="not_found">Not Found</string>
 
     <string name="success_login">Login Success</string>
     <string name="success_registration">SignUp Success</string>
